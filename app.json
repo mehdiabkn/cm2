@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "malsi93",
+    "scheme": "malsi93",
     "slug": "malsi93",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -12,16 +13,31 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "package": "com.mhd.mhd",
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need access to your camera to take pictures.",
+        "NSPhotoLibraryUsageDescription": "We need access to your photo library to select images."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "package": "com.mhd.mhd"
+
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
